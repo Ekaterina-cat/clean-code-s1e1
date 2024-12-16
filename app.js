@@ -34,16 +34,20 @@ var createNewTaskElement=function(taskString){
 
   label.innerText=taskString;
   label.className="task";
+  listItem.className="list_item";
+  deleteButtonImg.className="btn-del_img";
+  checkBox.className="input-field checkbox-task";
 
   //Each elements, needs appending
   checkBox.type="checkbox";
   editInput.type="text";
-  editInput.className="task";
+  editInput.className="input-field record-field-task";
+  
 
   editButton.innerText="Edit"; //innerText encodes special characters, HTML does not.
-  editButton.className="edit";
+  editButton.className="edit btn";
 
-  deleteButton.className="delete";
+  deleteButton.className="delete btn";
   deleteButtonImg.src="./remove.svg";
   deleteButton.appendChild(deleteButtonImg);
 

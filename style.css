@@ -17,7 +17,7 @@
   font-family: fantasy, cursive;
 }
 @media (max-width: 768px) {
-  .aaa {
+  .header {
     text-align: center;
   }
 }
@@ -26,28 +26,31 @@
   width: 500px;
   margin: 0 auto 0;
 }
-.task,
-.field-record {
+.list_item-task,
+.list_item-input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
-.row-task {
+.block-add-task_row {
   display: flex;
 }
 .list {
   margin: 0;
   padding: 0px;
 }
-.list_item
-.title-list {
+.list_item,
+.title-list,
+.block-add-task_title {
   list-style: none;
 }
 .input-field,
-.btn{
+.block-add-task_row-btn,
+.list_item-btn{
   outline: none;
 }
-.btn {
+.block-add-task_row-btn,
+.list_item-btn {
   background: none;
   border: 0px;
   color: #888;
@@ -56,12 +59,14 @@
   font-family: Lato, sans-serif;
   cursor: pointer;
 }
-.btn:hover {
+.block-add-task_row-btn:hover,
+.list_item-btn:hover {
   color: #3a3a3a;
 }
 
 /* Heading */
-.title-list {
+.title-list,
+.block-add-task_title {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -70,7 +75,7 @@
   margin: 0;
   text-transform: uppercase;
 }
-.field-record {
+.list_item-input {
   margin: 0;
   width: 226px;
   font-size: 18px;
@@ -83,12 +88,12 @@
   font-family: Lato, sans-serif;
   color: #888;
 }
-.field-record:focus {
+.list_item-input:focus {
   color: #333;
 }
 
 /* New Task */
-label[for="new-task"] {
+.block-add-task_title {
   display: block;
   margin: 0 0 20px;
 }
@@ -108,10 +113,10 @@ label[for="new-task"] {
 .list_item > * {
   vertical-align: middle;
 }
-.checkbox-task {
+.list_item-checkbox {
   margin: 0 10px;
 }
-.list_item > label {
+.list_item-task {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
@@ -127,19 +132,19 @@ label[for="new-task"] {
 }
 
 /* Completed */
-.completed-tasks label {
+.completed-tasks .list_item-task {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
-.list_item .field-record {
+.list_item .list_item-input {
   display: none;
 }
-.edit-mode .field-record {
+.list_item-edit .list_item-input {
   display: inline-block;
   width: 224px;
 }
-.edit-mode label {
+.list_item-edit .list_item-task {
   display: none;
 }
